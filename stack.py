@@ -1,6 +1,7 @@
 
 class StackInteger():
     def __init__(self,list=[]):
+        """Constructor!"""
         self.elements = list
 
     def delete(self) ->None:
@@ -13,15 +14,17 @@ class StackInteger():
 
     def addElement(self,data)->None:
         """Add an element to the stack!
+
         Args:
             data: The element you want to add to the stack must be an integer!"""
-        if type(data) !=int:
+        if not isinstance(data,int):
             raise TypeError("Type must be int") 
-        self.elements.insert(0,data)
 
+        self.elements.insert(0,data)
 
     def elementAt(self,position)->int:
         """Return the element at the position you want!
+
         Args:
             position: The position you want to get the element from!"""
         return self.elements[position]
@@ -32,6 +35,7 @@ class StackInteger():
 
     def smartSum(self,duplicate=False)->int:
         """Return the sum of the elements of the stack!
+
         Args: optional:
             duplicate: If you want to sum the duplicates or not!
             must be a boolean!"""
@@ -45,6 +49,7 @@ class StackInteger():
 
     def smatAdd(self,data)->int:
         """Add an element to the stack with duplicate check!
+
         Args:
             data: The element you want to add to the stack must be an integer!"""
         if type(data) !=int:
@@ -71,6 +76,7 @@ class StackInteger():
 
     def count(self,data) ->int:
         """Return the number of the data you want to count!
+
         Args:
             data: The data you want to count!"""
 
@@ -84,8 +90,11 @@ class StackInteger():
 
     def indexOf(self,data=int) ->int:
         """Return the index of the data you want to find!
+
         Args:
             data: The data you want to find!
+            must be an integer!
+
             Returns:
                 The index of the data you want to find!
                 If the data is not in the stack, it will return -1!"""
@@ -103,9 +112,10 @@ class StackInteger():
     
     def deleteAllCopy(self,data)->None:
         """Delete all the copies of the data you want to delete!
+
         Args:
             data: The data you want to delete!"""
-        if type(data) !=int:
+        if not isinstance(data,int):
             raise TypeError("Type must be int") 
         while self.elements.count(data)>0:
             self.elements.remove(data)
@@ -125,6 +135,7 @@ class StackInteger():
     
     def smartsort(self,duplicate=False,reverse=False) -> object:
         """Sort the elements of the stack!
+
         Args: optional:
             duplicate: If you want to sort the duplicates or not!
             must be a boolean!
@@ -141,6 +152,7 @@ class StackInteger():
 
     def convertListToStack(self,list,smart=False,duplicated=False) -> object:
         """Convert a list to a stack!
+
         Args:
             list: The list you want to convert!
             smart: If you want to sort the elements of the stack (with smart sort) so you can delete duplicate!"""
