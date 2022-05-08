@@ -15,6 +15,8 @@ class StackInteger():
     def addElement(self,data)->None:
         """Add an element to the stack!
 
+
+
         Args:
             data: The element you want to add to the stack must be an integer!"""
         if not isinstance(data,int):
@@ -24,6 +26,7 @@ class StackInteger():
 
     def elementAt(self,position)->int:
         """Return the element at the position you want!
+
 
         Args:
             position: The position you want to get the element from!"""
@@ -35,6 +38,7 @@ class StackInteger():
 
     def smartSum(self,duplicate=False)->int:
         """Return the sum of the elements of the stack!
+
 
         Args: optional:
             duplicate: If you want to sum the duplicates or not!
@@ -49,6 +53,7 @@ class StackInteger():
 
     def smatAdd(self,data)->int:
         """Add an element to the stack with duplicate check!
+
 
         Args:
             data: The element you want to add to the stack must be an integer!"""
@@ -77,6 +82,7 @@ class StackInteger():
     def count(self,data) ->int:
         """Return the number of the data you want to count!
 
+
         Args:
             data: The data you want to count!"""
 
@@ -90,6 +96,7 @@ class StackInteger():
 
     def indexOf(self,data=int) ->int:
         """Return the index of the data you want to find!
+
 
         Args:
             data: The data you want to find!
@@ -112,6 +119,7 @@ class StackInteger():
     
     def deleteAllCopy(self,data)->None:
         """Delete all the copies of the data you want to delete!
+
 
         Args:
             data: The data you want to delete!"""
@@ -136,6 +144,7 @@ class StackInteger():
     def smartsort(self,duplicate=False,reverse=False) -> object:
         """Sort the elements of the stack!
 
+
         Args: optional:
             duplicate: If you want to sort the duplicates or not!
             must be a boolean!
@@ -153,6 +162,7 @@ class StackInteger():
     def convertListToStack(self,list,smart=False,duplicated=False) -> object:
         """Convert a list to a stack!
 
+
         Args:
             list: The list you want to convert!
             smart: If you want to sort the elements of the stack (with smart sort) so you can delete duplicate!"""
@@ -163,16 +173,20 @@ class StackInteger():
 
 
     def __str__(self):
+        """Return the elements of the stack as a string!"""
         return str(self.elements)
 
     def __repr__(self):
-        return str(self.elements)
+        """Return the elements of the stack as a string!"""
+        return repr(self.elements)
 
     def __len__(self):
+        """Return the size of the stack!"""
         return len(self.elements)
 
 
     def __iter__(self):
+        """Return the elements of the stack as a iterator!"""
         return iter(self.elements)
 
 
