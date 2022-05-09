@@ -75,8 +75,7 @@ class StackInteger():
 
         Args:
             data: The data you want to count!"""
-
-        if type(data) !=int:
+        if not isinstance(data,int):
             raise TypeError("Type must be int") 
         counter=0
         for elements in self.elements:
@@ -95,7 +94,7 @@ class StackInteger():
                 The index of the data you want to find!
                 If the data is not in the stack, it will return -1!"""
 
-        if type(data) !=int:
+        if not isinstance(data,int):
             raise TypeError("Type must be int")
         for index in range(self.elements.size()):
             if self.elements[index]==data:
@@ -174,7 +173,3 @@ class StackInteger():
     def __iter__(self):
         """Return the elements of the stack as a iterator!"""
         return iter(self.elements)
-
-
-
-
